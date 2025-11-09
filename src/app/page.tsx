@@ -53,7 +53,7 @@ export default function Page() {
         </div>
         
         <div className="relative z-10 container text-center space-y-6 px-4">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-sans font-bold tracking-tight">
             Handcrafted with Love
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
