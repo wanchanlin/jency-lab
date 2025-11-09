@@ -92,7 +92,7 @@ export default function ProductsPage() {
       {/* Header */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold">
+          <h1 className="text-4xl md:text-5xl font-sans font-bold">
             Our Collection
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -146,7 +146,7 @@ export default function ProductsPage() {
                     </span>
                     <Button size="sm">
                       <ShoppingCart className="h-4 w-4 mr-2" />
-                      Add
+                      More Info
                     </Button>
                   </div>
                 </CardContent>

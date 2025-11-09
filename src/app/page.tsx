@@ -76,7 +76,7 @@ export default function Page() {
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold">
+            <h2 className="text-3xl md:text-4xl font-sans font-bold">
               Crafted by Hand, Inspired by Nature
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -121,7 +121,7 @@ export default function Page() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold">
+            <h2 className="text-3xl md:text-4xl font-sans font-bold">
               Featured Collection
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -164,7 +164,7 @@ export default function Page() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold">
+          <h2 className="text-3xl md:text-4xl font-sans font-bold">
             Experience Natural Beauty
           </h2>
           <p className="text-lg max-w-2xl mx-auto opacity-90">
