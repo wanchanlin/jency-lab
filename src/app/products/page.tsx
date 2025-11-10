@@ -16,7 +16,8 @@ const products = [
     price: 12.99,
     category: "Floral",
     image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Calming lavender with shea butter for relaxation"
+    description: "Calming lavender with shea butter for relaxation",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ const products = [
     price: 11.99,
     category: "Citrus",
     image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Energizing orange and lemon blend"
+    description: "Energizing orange and lemon blend",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ const products = [
     price: 13.99,
     category: "Floral",
     image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Luxurious rose petals and essential oils"
+    description: "Luxurious rose petals and essential oils",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 4,
@@ -40,7 +43,8 @@ const products = [
     price: 11.99,
     category: "Herbal",
     image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Cool peppermint and eucalyptus"
+    description: "Cool peppermint and eucalyptus",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 5,
@@ -48,7 +52,8 @@ const products = [
     price: 12.99,
     category: "Natural",
     image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Gentle oatmeal with raw honey"
+    description: "Gentle oatmeal with raw honey",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 6,
@@ -56,7 +61,8 @@ const products = [
     price: 14.99,
     category: "Specialty",
     image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Activated charcoal for deep cleansing"
+    description: "Activated charcoal for deep cleansing",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 7,
@@ -64,7 +70,9 @@ const products = [
     price: 12.99,
     category: "Natural",
     image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Tropical coconut with cocoa butter"
+    description: "Tropical coconut with cocoa butter",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
+  
   },
   {
     id: 8,
@@ -72,7 +80,8 @@ const products = [
     price: 13.99,
     category: "Herbal",
     image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Purifying tea tree and mint"
+    description: "Purifying tea tree and mint",
+    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   }
 ];
 
@@ -139,6 +148,9 @@ export default function ProductsPage() {
                   <div>
                     <h3 className="font-semibold text-lg">{product.name}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{product.description}</p>
+                  </div>
+                  <div className="flex items-center justify-center pt-2">
+                  <p className="text-sm text-muted-foreground mt-1">{product.ingredients}</p>
                   </div>
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-xl font-bold text-primary">

@@ -83,7 +83,7 @@ export default function StoryPage() {
         <div className="container max-w-4xl">
           <div className="prose prose-lg mx-auto">
             <div className="space-y-6 text-center md:text-left">
-              <h2 className="text-3xl font-serif font-bold">How It All Began</h2>
+              <h2 className="text-3xl font-sans font-bold">How It All Began</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Our journey started in a small kitchen, where a passion for natural skincare met 
                 the art of traditional soap making. Frustrated by harsh commercial soaps filled 
@@ -105,7 +105,7 @@ export default function StoryPage() {
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold">
+            <h2 className="text-3xl md:text-4xl font-sans font-bold">
               Our Soap Making Process
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -141,7 +141,7 @@ export default function StoryPage() {
       <section className="py-16 md:py-20">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold">
+            <h2 className="text-3xl md:text-4xl font-sans font-bold">
               Our Values
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -163,7 +163,7 @@ export default function StoryPage() {
       {/* Ingredients Section */}
       <section className="py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container text-center space-y-6 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold">
+          <h2 className="text-3xl md:text-4xl font-sans font-bold">
             Ingredients We Love
           </h2>
           <p className="text-lg opacity-90">

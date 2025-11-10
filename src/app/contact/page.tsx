@@ -48,7 +48,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold">
+          <h1 className="text-4xl md:text-5xl font-sans font-bold">
             Get In Touch
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -72,21 +72,13 @@ export default function ContactPage() {
                       <Mail className="h-5 w-5 text-primary mt-0.5" />
                       <div>
                         <p className="font-medium">Email</p>
-                        <a href="mailto:hello@artisansoaps.com" className="text-sm text-muted-foreground hover:text-primary">
-                          hello@artisansoaps.com
+                        <a href="mailto:jency.soap@gmail.com" className="text-sm text-muted-foreground hover:text-primary">
+                        jency.soap@gmail.com
                         </a>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <Phone className="h-5 w-5 text-primary mt-0.5" />
-                      <div>
-                        <p className="font-medium">Phone</p>
-                        <a href="tel:+15551234567" className="text-sm text-muted-foreground hover:text-primary">
-                          (555) 123-4567
-                        </a>
-                      </div>
-                    </div>
+                   
 
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-primary mt-0.5" />
