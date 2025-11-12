@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Artisan Soaps - Handcrafted Natural Beauty",
+  title: "Jency Lab - Handcrafted Natural Care",
   description: "Discover our collection of handmade, organic soaps crafted with love and natural ingredients",
 };
 
