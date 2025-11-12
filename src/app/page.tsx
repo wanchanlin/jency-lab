@@ -117,6 +117,49 @@ export default function Page() {
         </div>
       </section>
 
+      {/* services Section */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-sans font-bold">
+              Our Services
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We offer a wide range of services to help you take care of your skin and body.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <Leaf className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold">customized skincare</h3>
+                <p className="text-sm text-muted-foreground">
+                  We offer customized skincare services to help you take care of your skin and body.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold">Seasonal Skincare Packages</h3>
+                <p className="text-sm text-muted-foreground">
+                  We offer seasonal skincare packages to help you take care of your skin and body.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold">Customized gift packages</h3>
+                <p className="text-sm text-muted-foreground">
+                  We offer customized gift packages to help you take care of your skin and body.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products */}
       <section className="py-16 md:py-24">
         <div className="container">
