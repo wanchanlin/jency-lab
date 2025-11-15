@@ -14,75 +14,56 @@ import { ShoppingCart } from "lucide-react";
 const products = [
   {
     id: 1,
-    name: "Lavender Dreams",
+    name: "Cherry Blossom",
     price: 12.99,
     category: "Floral",
-    image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Calming lavender with shea butter for relaxation",
+    image: "images/products/sakura.jpg",
+    description: "A soft cherry blossom scent with a gentle floral finish for calming relaxation.",
     ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 2,
-    name: "Citrus Burst",
-    price: 11.99,
-    category: "Citrus",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Energizing orange and lemon blend",
+    name: "Charcoal Detox",
+    price: 14.99,
+    category: "Specialty",
+    image: "images/products/charcoal.jpg",
+    description: "Activated charcoal helps remove impurities and deeply cleanse the skin.",
     ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 3,
-    name: "Rose Garden",
-    price: 13.99,
-    category: "Floral",
-    image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Luxurious rose petals and essential oils",
+    name: "Coffee Dream",
+    price: 11.99,
+    category: "Specialty",
+    image: "images/products/coffee.jpg",
+    description: "A rich coffee-infused bar that gently exfoliates and awakens the senses.",
     ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 4,
-    name: "Mint Refresh",
-    price: 11.99,
-    category: "Herbal",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Cool peppermint and eucalyptus",
+    name: "Rose Garden",
+    price: 13.99,
+    category: "Floral",
+    image: "images/products/lufarose.jpg",
+    description: "A luxurious floral bar infused with rose petals and essential oils.",
     ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 5,
-    name: "Honey Oat",
+    name: "Mugwort Detox",
     price: 12.99,
-    category: "Natural",
-    image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Gentle oatmeal with raw honey",
+    category: "Herbal",
+    image: "images/products/herb.jpg",
+    description: "A clarifying mugwort herbal shampoo bar that helps cleanse and refresh the scalp.",
     ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   },
   {
     id: 6,
-    name: "Charcoal Detox",
-    price: 14.99,
-    category: "Specialty",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Activated charcoal for deep cleansing",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
-  },
-  {
-    id: 7,
-    name: "Coconut Cream",
-    price: 12.99,
-    category: "Natural",
-    image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-    description: "Tropical coconut with cocoa butter",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
-  
-  },
-  {
-    id: 8,
-    name: "Tea Tree Fresh",
-    price: 13.99,
+    name: "Ocean Salt",
+    price: 11.99,
     category: "Herbal",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-    description: "Purifying tea tree and mint",
+    image: "images/products/oceansalt.jpg",
+    description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
     ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
   }
 ];
@@ -194,8 +175,8 @@ function ProductsContent() {
                       ${product.price.toFixed(2)}
                     </span>
                     <Button size="sm">
-                      <ShoppingCart className="h-4 w-4 mr-2" />
-                      More Info
+                      {/* <ShoppingCart className="h-4 w-4 mr-2" /> */}
+                      Contact Us
                     </Button>
                   </div>
                 </CardContent>
