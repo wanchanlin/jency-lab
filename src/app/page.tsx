@@ -4,38 +4,27 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import { products } from "@/data/collections";
+
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  category: string;
+  image: string;
+  description: string;
+  ingredients: string;
+};
 
 export default function Page() {
-  const featuredProducts = [
-    {
-      id: 1,
-      name: "Lavender Dreams",
-      price: "$12.99",
-      image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-      description: "Calming lavender with shea butter"
-    },
-    {
-      id: 2,
-      name: "Citrus Burst",
-      price: "$11.99",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-      description: "Energizing orange and lemon blend"
-    },
-    {
-      id: 3,
-      name: "Rose Garden",
-      price: "$13.99",
-      image: "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=600&q=80",
-      description: "Luxurious rose petals and oils"
-    },
-    {
-      id: 4,
-      name: "Mint Refresh",
-      price: "$11.99",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-      description: "Cool peppermint and eucalyptus"
-    }
-  ];
+  // Get first 4 products as featured products
+  const featuredProducts = products.slice(0, 4).map((product: Product) => ({
+    id: product.id,
+    name: product.name,
+    price: `$${product.price.toFixed(2)}`,
+    image: product.image,
+    description: product.description
+  }));
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -61,7 +50,7 @@ export default function Page() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" asChild className="text-lg">
-              <Link href="/products">
+              <Link href="/collections">
                 See Collection <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -183,7 +172,7 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
+            {featuredProducts.map((product: { id: number; name: string; price: string; image: string; description: string }) => (
               <Card key={product.id} className="group overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-square overflow-hidden">
                   <img
@@ -206,7 +195,7 @@ export default function Page() {
 
           <div className="text-center mt-12">
             <Button size="lg" variant="outline" asChild>
-              <Link href="/products">
+              <Link href="/collections">
                 View All Products <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -247,18 +236,9 @@ export default function Page() {
               </p>
               
               <div className="mt-4 md:mt-0">
-                  {/* Assuming Button and Link components are available */}
-                  {/* <Button size="lg" variant="secondary" asChild>
-                      <Link href="/products">Start Shopping</Link>
-                  </Button> */}
-                  
-                  {/* Placeholder for the button component */}
-                  <a 
-                      href="/products" 
-                      className="inline-flex items-center justify-center rounded-md text-sm font-medium h-12 px-6 bg-green-600 text-white hover:bg-green-700 transition-colors shadow-lg"
-                  >
-                      Start Shopping
-                  </a>
+                  <Button size="lg" variant="secondary" asChild>
+                    <Link href="/collections">Start Shopping</Link>
+                  </Button>
               </div>
           
         </div>
