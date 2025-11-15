@@ -196,7 +196,7 @@ export default function Page() {
           <div className="text-center mt-12">
             <Button size="lg" variant="outline" asChild>
               <Link href="/collections">
-                View All Products <ArrowRight className="ml-2 h-5 w-5" />
+                View All Collection <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -237,7 +237,7 @@ export default function Page() {
               
               <div className="mt-4 md:mt-0">
                   <Button size="lg" variant="secondary" asChild>
-                    <Link href="/collections">Start Shopping</Link>
+                    <Link href="/xontact">Contact Us</Link>
                   </Button>
               </div>
           
