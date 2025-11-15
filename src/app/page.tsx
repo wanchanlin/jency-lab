@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { products } from "@/data/collections";
+import CustomButton from "@/components/button";
 
 type Product = {
   id: number;
@@ -49,11 +50,14 @@ export default function Page() {
             Natural, organic soaps made with care for your skin and the planet
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" asChild className="text-lg">
-              <Link href="/collections">
-                See Collection <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <CustomButton
+              href="/collections"
+              text="See Collection"
+              icon={ArrowRight}
+              iconPosition="right"
+              size="lg"
+              className="text-lg"
+            />
             <Button size="lg" variant="outline" asChild className="text-lg">
               <Link href="/story">Our Story</Link>
             </Button>
@@ -186,7 +190,7 @@ export default function Page() {
                   <p className="text-sm text-muted-foreground">{product.description}</p>
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-lg font-bold text-primary">{product.price}</span>
-                    <Button size="sm">Add to Cart</Button>
+                    <Button size="sm">View Collections</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -236,9 +240,14 @@ export default function Page() {
               </p>
               
               <div className="mt-4 md:mt-0">
-                  <Button size="lg" variant="secondary" asChild>
-                    <Link href="/xontact">Contact Us</Link>
-                  </Button>
+              <CustomButton
+              href="/contact"
+              text="Contact Us"
+              icon={ArrowRight}
+              iconPosition="right"
+              size="lg"
+              className="text-lg"
+            />
               </div>
           
         </div>
