@@ -6,7 +6,7 @@ export const products = [
     category: "Floral",
     image: "images/products/sakura.jpg",
     description: "A soft cherry blossom scent with a gentle floral finish for calming relaxation.",
-    ingredients: "Olive Oil,Coconut Oil, Shea Butter, Sunflower Seed Oil, cherry blossome essential Oil,French Pink Clay"
+    ingredients: "Olive Oil, Coconut Oil, Shea Butter, Sunflower Seed Oil, Essential Oil,French Pink Clay, Sodium Hydroxide"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const products = [
     category: "Specialty",
     image: "images/products/charcoal.jpg",
     description: "Activated charcoal helps remove impurities and deeply cleanse the skin.",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
+    ingredients: " Olive Oil, Coconut Oil, Shea Butter, Essential Oils, Bamboo Charcoal Powder,  Sodium Hydroxide"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const products = [
     category: "Specialty",
     image: "images/products/coffee.jpg",
     description: "A rich coffee-infused bar that gently exfoliates and awakens the senses.",
-    ingredients: " Olive Oil, Beeswax,Coconut Oil , Sunflower Seed Oil, Shea Fruit Butter, Essential Oil, Coco Power"
+    ingredients: " Olive Oil, Beeswax, Coconut Oil , Sunflower Seed Oil, Shea Fruit Butter, Essential Oil, Coco Power, Coffee Ground, Sodium Hydroxide"
   },
   {
     id: 4,
@@ -33,16 +33,16 @@ export const products = [
     category: "Floral",
     image: "images/products/lufarose.jpg",
     description: "A luxurious floral bar infused with rose petals and essential oils.",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
+    ingredients: "Olive Oil, Coconut Oil, Castor Oil, Plam Oil, Ginger water, lye, Essential Pil, Pink Clay, Sodium Hydroxide"
   },
   {
     id: 5,
-    name: "Mugwort Detox",
+    name: "Mugwort Detox Shampoo",
     price: 12.99,
     category: "Herbal",
     image: "images/products/herb.jpg",
     description: "A clarifying mugwort herbal shampoo bar that helps cleanse and refresh the scalp.",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
+    ingredients: "Sodium Cocoyl Isethionate,Sodium Lauryl Sulfoacetate, Mugwort Powder, Essential Oil, Castor Oil "
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export const products = [
     category: "Herbal",
     image: "images/products/oceansalt.jpg",
     description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
-    ingredients: "Olive Oil - All Grades, Coconut Oil, Salt, Milk, Essential oil"
+    ingredients: "Olive Oil, Coconut Oil, Salt, Milk, Essential Oil, Sodium Hydroxide"
   }
 ];
 
