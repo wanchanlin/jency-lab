@@ -6,7 +6,7 @@ export const products = [
     category: "Floral",
     image: "images/products/sakura.jpg",
     description: "A soft cherry blossom scent with a gentle floral finish for calming relaxation.",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
+    ingredients: "Olive Oil,Coconut Oil, Shea Butter, Sunflower Seed Oil, cherry blossome essential Oil,French Pink Clay"
   },
   {
     id: 2,
