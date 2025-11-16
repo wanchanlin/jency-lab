@@ -24,7 +24,7 @@ export const products = [
     category: "Specialty",
     image: "images/products/coffee.jpg",
     description: "A rich coffee-infused bar that gently exfoliates and awakens the senses.",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
+    ingredients: " Olive Oil, Beeswax,Coconut Oil , Sunflower Seed Oil, Shea Fruit Butter, Essential Oil, Coco Power"
   },
   {
     id: 4,
