@@ -51,7 +51,7 @@ export const products = [
     category: "Herbal",
     image: "images/products/oceansalt.jpg",
     description: "A cooling blend of peppermint and eucalyptus inspired by the fresh ocean breeze.",
-    ingredients: "Oatmeal, Honey, Olive Oil, Coconut Oil, Shea Butter, Essential Oils"
+    ingredients: "Olive Oil - All Grades, Coconut Oil, Salt, Milk, Essential oil"
   }
 ];
 
