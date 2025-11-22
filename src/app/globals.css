@@ -57,3 +57,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide YouTube loading indicators and spinner */
+iframe[src*="youtube.com"] {
+  position: relative;
+}
+
+/* Hide YouTube's loading overlay and spinner */
+iframe[src*="youtube.com"]::after {
+  display: none !important;
+}
+
+/* Additional styles to hide YouTube UI elements */
+.youtube-player-container {
+  overflow: hidden;
+  /* Hide any loading indicators that might appear */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Ensure smooth transitions and hide loading states */
+.youtube-player-container iframe {
+  transition: opacity 0.3s ease;
+}

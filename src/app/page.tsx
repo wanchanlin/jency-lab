@@ -33,19 +33,25 @@ export default function Page() {
       
       {/* Hero Section */}
       <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
-        {/* YouTube Video Background */}
+       
+        <video
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.77777778vh] h-[56.25vw] min-w-full min-h-full object-cover"
+    autoPlay
+    loop
+    muted
+    playsInline
+    preload="auto" // Helps load the video instantly
+  >
+    {/* Use a modern format like WebM first for better compression */}
+    {/* <source src="/videos/your-background-video.webm" type="video/webm" /> */}
+    <source src="../videos/hero.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
         <div className="absolute inset-0 w-full h-full">
-          <iframe
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.77777778vh] h-[56.25vw] min-w-full min-h-full"
-            src="https://www.youtube.com/embed/VzvS8o3x3xU?autoplay=1&loop=1&playlist=VzvS8o3x3xU&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
-            title="YouTube video player"
-            allow=" autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            style={{ pointerEvents: 'none' }}
-          />
-        </div>
+  
+</div>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background z-[1]" />
         
         <div className="relative z-10 container text-center space-y-6 px-4">
           <h1 className="text-5xl md:text-7xl font-sans font-bold tracking-tight">
