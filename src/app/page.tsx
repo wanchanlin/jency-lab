@@ -53,19 +53,19 @@ export default function Page() {
         >
           {/* Use a modern format like WebM first for better compression */}
           {/* <source src="/videos/your-background-video.webm" type="video/webm" /> */}
-          <source src="../videos/hero.mp4" type="video/mp4" />
+          <source src="../videos/bubble.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 w-full h-full"></div>
+        <div className="absolute inset-0 w-full h-full bg-black/50"></div>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/70 to-background z-[1]" />
+        <div className="absolute inset-0  to-background z-[1]" />
 
         <div className="relative z-10 container text-center space-y-6 px-4">
-          <h1 className="text-5xl md:text-7xl font-sans font-bold tracking-tight">
+          <h1 className="text-5xl text-white md:text-7xl font-sans font-bold tracking-tight">
             Handcrafted with Love
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Natural, organic soaps made with care for your skin and the planet
+          <p className="text-xl text-white md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            Natural skin care made for your skin and soul.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <CustomButton
@@ -100,23 +100,23 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
               <div className="space-y-6 ">
                 <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-white bg-primary/10 flex items-center justify-center mx-auto">
-                  <Sprout className="h-6 w-6 text-primary" />
+                  <div className="w-12 h-12 rounded-full bg-white bg-primary/10 flex items-center justify-center mx-auto">
+                    <Sprout className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-white">100% Natural</h3>
+                  <p className="text-sm text-white text-muted-foreground">
+                    Only pure, organic ingredients from trusted sources
+                  </p>
                 </div>
-                <h3 className="font-semibold text-white">100% Natural</h3>
-                <p className="text-sm text-white text-muted-foreground">
-                  Only pure, organic ingredients from trusted sources
-                </p>
-              </div>
-               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto">
-                  <Heart className="h-6  w-6 text-primary" />
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto">
+                    <Heart className="h-6  w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-white">Handmade</h3>
+                  <p className=" text-white text-sm text-muted-foreground">
+                    Crafted in small batches with attention to detail
+                  </p>
                 </div>
-                <h3 className="font-semibold text-white">Handmade</h3>
-                <p className=" text-white text-sm text-muted-foreground">
-                  Crafted in small batches with attention to detail
-                </p>
-              </div>
               </div>
               <Image
                 className="mx-auto order-first md:order-none"
@@ -124,28 +124,27 @@ export default function Page() {
                 alt="Handcrafted soap bars"
                 width={220}
                 height={320}
-               
               />
-             <div className="space-y-6 ">
-              <div className="space-y-3">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto">
-                  <Sparkles className="h-6 w-6 text-primary" />
+              <div className="space-y-6 ">
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto">
+                    <Sparkles className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-white">Skin Loving</h3>
+                  <p className="text-sm text-white text-muted-foreground">
+                    Gentle formulas that nourish and protect
+                  </p>
                 </div>
-                <h3 className="font-semibold text-white">Skin Loving</h3>
-                <p className="text-sm text-white text-muted-foreground">
-                  Gentle formulas that nourish and protect
-                </p>
-              </div>
-              <div className="space-y-3">
-                <div className="w-12 h-12  rounded-full bg-white flex items-center justify-center mx-auto">
-                  <Leaf className="h-6 w-6 text-primary" />
+                <div className="space-y-3">
+                  <div className="w-12 h-12  rounded-full bg-white flex items-center justify-center mx-auto">
+                    <Leaf className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-white">Vegan Options</h3>
+                  <p className="text-sm text-white text-muted-foreground">
+                    Plant-based recipes that are gentle on your skin and the
+                    planet.
+                  </p>
                 </div>
-                <h3 className="font-semibold text-white">Vegan Options</h3>
-                <p className="text-sm text-white text-muted-foreground">
-                  Plant-based recipes that are gentle on your skin and the
-                  planet.
-                </p>
-              </div>
               </div>
             </div>
           </div>
@@ -173,9 +172,9 @@ export default function Page() {
                 </p>
               </div>
               <div className="space-y-3 bg-primary/10 p-4 rounded-lg">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                {/* <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                   <Flower className="h-6 w-6 text-primary" />
-                </div>
+                </div> */}
                 <h3 className="font-semibold">Customized Skincare</h3>
                 <p className="text-sm text-muted-foreground">
                   We offer customized skincare services to help you take care of
@@ -183,9 +182,9 @@ export default function Page() {
                 </p>
               </div>
               <div className="space-y-3  bg-primary/10 p-4 rounded-lg">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                {/* <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                   <Package className="h-6 w-6 text-primary" />
-                </div>
+                </div> */}
                 <h3 className="font-semibold">Seasonal Skincare Packages</h3>
                 <p className="text-sm text-muted-foreground">
                   We offer seasonal skincare packages to help you take care of
@@ -193,9 +192,9 @@ export default function Page() {
                 </p>
               </div>
               <div className="space-y-3 bg-primary/10 p-4 rounded-lg">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
+                {/* <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
                   <Gift className="h-6 w-6 text-primary" />
-                </div>
+                </div> */}
                 <h3 className="font-semibold">Customized Gift Packages</h3>
                 <p className="text-sm text-muted-foreground">
                   We offer customized gift packages to help you take care of
@@ -207,7 +206,16 @@ export default function Page() {
         </div>
       </section>
       {/* <hr className="my-4 border-t-8 border-dotted border-primary/10 container" /> */}
-
+      <div className="flex w-full items-center container m">
+        <div className="flex-1 border-b border-gray-300"></div>
+        <Link
+          href="/contact"
+          className="px-4 py-2 bg-primary text-white rounded-md"
+        >
+          Contact Us
+        </Link>
+        <div className="flex-1 border-b border-gray-300"></div>
+      </div>
       {/* Featured Products */}
       <section className="py-16 md:py-24">
         <div className="container">
