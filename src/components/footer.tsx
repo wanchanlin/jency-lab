@@ -32,10 +32,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/products"
+                  href="/collections"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Products
+                  Collections
                 </Link>
               </li>
               <li>
