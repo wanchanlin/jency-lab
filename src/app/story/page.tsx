@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Leaf, Heart, Sparkles, Droplets, Sun, Moon } from "lucide-react";
+import CTA from "@/components/cta2";
 
 export default function StoryPage() {
   const process = [
@@ -176,6 +177,7 @@ export default function StoryPage() {
           </p>
         </div>
       </section>
+      <CTA />
 
       <Footer />
     </div>
