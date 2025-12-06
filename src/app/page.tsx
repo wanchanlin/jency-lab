@@ -248,48 +248,6 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProducts.map((product) => (
-              // <Card
-              //   key={product.id}
-              //   className="group overflow-hidden border-primary/20 flex flex-col h-full"
-              // >
-              //   {/* Product Image */}
-              //   <div className="relative aspect-square overflow-hidden bg-muted">
-              //     {/* Using Next.js Image component safely */}
-              //     {product.image ? (
-              //       <Image
-              //         src={product.image}
-              //         alt={product.name}
-              //         fill
-              //         className="object-cover transition-transform group-hover:scale-105"
-              //       />
-              //     ) : (
-              //       <div className="flex items-center justify-center w-full h-full bg-gray-200">
-              //         <ShoppingBag className="h-10 w-10 text-gray-400" />
-              //       </div>
-              //     )}
-              //   </div>
-
-              //   <CardContent className="p-4 flex-grow">
-              //     <div className="space-y-2">
-              //       <h3 className="font-semibold text-lg leading-tight">
-              //         {product.name}
-              //       </h3>
-              //       <p className="text-sm text-muted-foreground line-clamp-2">
-              //         {product.description}
-              //       </p>
-              //     </div>
-              //   </CardContent>
-
-              //   <CardFooter className="p-4 pt-0 flex items-center justify-between">
-              //     <span className="font-bold text-lg text-primary">
-              //       {product.price}
-              //     </span>
-              //     <Button variant="outline" size="sm" className="gap-2">
-              //       Details
-              //     </Button>
-              //   </CardFooter>
-              // </Card>
-
                <Card key={product.id} className="group overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-square overflow-hidden relative">
                   <img
