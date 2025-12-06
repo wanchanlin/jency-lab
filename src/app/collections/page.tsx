@@ -27,6 +27,7 @@ function ProductsContent() {
   }, [searchParams]);
 
   const filteredProducts = useMemo(() => {
+    const normalize = (value?: string) => value?.toLowerCase() ?? "";
     let filtered = selectedCategory === "All" 
       ? products 
       : products.filter(p => p.category === selectedCategory);
@@ -34,10 +35,11 @@ function ProductsContent() {
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(product =>
-        product.name.toLowerCase().includes(query) ||
-        product.description.toLowerCase().includes(query) ||
-        product.category.toLowerCase().includes(query) ||
-        product.ingredients.toLowerCase().includes(query)
+        normalize(product.name).includes(query) ||
+        normalize(product.scent).includes(query) ||
+        normalize(product.description).includes(query) ||
+        normalize(product.category).includes(query) ||
+        normalize(product.ingredients).includes(query)
       );
     }
 
@@ -108,10 +110,17 @@ function ProductsContent() {
                 <CardContent className="p-4 space-y-3">
                   <div>
                     <h3 className="font-semibold text-lg">{product.name}</h3>
+                    <hr className="my-2"/> 
                     <p className="text-sm text-muted-foreground mt-1">{product.description}</p>
                   </div>
                   <div>
+                    <p className="text-sm font-bold text-muted-foreground mt-2">Scent</p>
+                    <hr className="my-2"/> 
+                     <p className="text-sm text-muted-foreground mt-1">{product.scent}</p>
+                  </div>
+                  <div>
                   <p className="text-sm font-bold text-muted-foreground mt-2">Ingredients</p>
+                  <hr className="my-2"/> 
                   <div className="flex items-center justify-center pt-2">
                     <p className="text-sm text-muted-foreground ">{product.ingredients}</p>
                   </div>

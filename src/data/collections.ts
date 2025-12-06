@@ -4,6 +4,7 @@ export const products = [
     name: "Gentle Pup Soap",
     price: 11.99,
     category: "Natural",
+    scent:"TeaTree",
     image: "images/products/dog.jpg",
     description: "A mild, pet-friendly soap bar made for dogs with sensitive skin, using gentle oils and natural ingredients.",
     ingredients: "Olive Oil, Coconut Oil, Essential Oil, Sodium Hydroxide"
@@ -13,6 +14,7 @@ export const products = [
     name: "Mint Refresh Salt Bar",
     price: 11.99,
     category: "Natural",
+    scent:"Mint, Lemon",
     image: "images/products/mintsalt.jpg",
     description: "A revitalizing mint-infused bar that exfoliates gently with natural salt while delivering a crisp, cooling sensation.",
     ingredients: "Olive Oil, Coconut Oil, Salt, French Clay, Essential Oil, Sodium Hydroxide"
