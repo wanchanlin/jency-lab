@@ -306,11 +306,9 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
                     <p className="text-sm text-muted-foreground mt-1">{product.description}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mt-1">
-  {product.scent || 'No scent information available'}
-</p>
+                    <p className="text-sm font-bold text-muted-foreground mt-2">Scent</p>
                     <hr className="my-2"/> 
-                     <p className="text-sm text-muted-foreground mt-1">{product.scent}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{product.scent || 'No scent information available'}</p>
                   </div>
                   <div>
                   <p className="text-sm font-bold text-muted-foreground mt-2">Ingredients</p>
