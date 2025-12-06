@@ -121,7 +121,7 @@ function ProductsContent() {
                   <div>
                   <p className="text-sm font-bold text-muted-foreground mt-2">Ingredients</p>
                   <hr className="my-2"/> 
-                  <div className="flex items-center justify-center pt-2">
+                  <div className="flex items-center justify-left pt-2">
                     <p className="text-sm text-muted-foreground ">{product.ingredients}</p>
                   </div>
                   </div>
