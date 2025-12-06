@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,6 +15,10 @@ import { products } from "@/data/collections";
 import CustomButton from "@/components/button";
 import Image from "next/image"; 
 import CTA from "@/components/cta2";
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
 
 type Product = {
   id: number;
@@ -25,7 +30,27 @@ type Product = {
   ingredients: string;
 };
 
+
 export default function Page() {
+  const ref = useRef<HTMLDivElement | null>(null);
+
+useEffect(() => {
+  if (typeof window === 'undefined' || !ref.current) return;
+  gsap.registerPlugin(ScrollTrigger);
+  const ctx = gsap.context(() => {
+    gsap.to('.box', {
+      y: -100,
+      duration: 1,
+      ease: 'power1.out',
+      scrollTrigger: {
+        trigger: '.box',
+        start: 'top center',
+        markers: false, // show markers while debugging
+      },
+    });
+  }, ref);
+  return () => ctx.revert();
+}, []);
   // Get first 4 products as featured products
   const featuredProducts = products.slice(0, 4).map((product: Product) => ({
     id: product.id,
@@ -36,7 +61,8 @@ export default function Page() {
   }));
 
   return (
-    <div className="min-h-screen flex flex-col">
+      <div ref={ref} className="min-h-screen flex flex-col">
+
       <Navigation />
 
       {/* Hero Section */}
@@ -58,7 +84,7 @@ export default function Page() {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0  to-background z-[1]" />
 
-        <div className="relative z-10 container text-center space-y-6 px-4">
+        <div className="relative z-10 container text-center space-y-6 px-4 box mt-36">
           <h1 className="text-5xl text-white md:text-7xl font-sans font-bold tracking-tight">
             Handcrafted with Love
           </h1>
