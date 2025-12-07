@@ -6,7 +6,7 @@ import {
   Leaf,
   Heart,
   Sprout,
-  ShoppingBag, // Added for the product card
+ 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card"; // Added CardFooter

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import CTA from "@/components/cta2";
@@ -18,39 +18,58 @@ import {
 
 export default function FAQPage() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
 
-  // Filter FAQ sections and items based on search query
+  // Debounce search query to reduce filtering operations
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, 150); // 150ms delay - adjust as needed
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // Optimized filter function
+  const filterSection = useCallback((section: typeof faqSections[0], query: string) => {
+    const lowerQuery = query.toLowerCase();
+    const titleMatch = section.title.toLowerCase().includes(lowerQuery);
+    const descMatch = section.description.toLowerCase().includes(lowerQuery);
+    
+    // If section title/description matches, show all items
+    if (titleMatch || descMatch) {
+      return {
+        ...section,
+        items: section.items,
+      };
+    }
+    
+    // Otherwise, filter items based on question/answer content
+    const filteredItems = section.items.filter(
+      (item) =>
+        item.question.toLowerCase().includes(lowerQuery) ||
+        item.answer.toLowerCase().includes(lowerQuery)
+    );
+
+    // Include section only if it has matching items
+    if (filteredItems.length > 0) {
+      return {
+        ...section,
+        items: filteredItems,
+      };
+    }
+    return null;
+  }, []);
+
+  // Filter FAQ sections and items based on debounced search query
   const filteredSections = useMemo(() => {
-    if (!searchQuery.trim()) {
+    if (!debouncedQuery.trim()) {
       return faqSections;
     }
 
-    const query = searchQuery.toLowerCase();
-    
     return faqSections
-      .map((section) => {
-        // Filter items within each section
-        const filteredItems = section.items.filter(
-          (item) =>
-            item.question.toLowerCase().includes(query) ||
-            item.answer.toLowerCase().includes(query) ||
-            section.title.toLowerCase().includes(query) ||
-            section.description.toLowerCase().includes(query)
-        );
-
-        // Only include section if it has matching items or the section title/description matches
-        if (filteredItems.length > 0 || 
-            section.title.toLowerCase().includes(query) ||
-            section.description.toLowerCase().includes(query)) {
-          return {
-            ...section,
-            items: filteredItems,
-          };
-        }
-        return null;
-      })
+      .map((section) => filterSection(section, debouncedQuery))
       .filter((section): section is typeof faqSections[0] => section !== null);
-  }, [searchQuery]);
+  }, [debouncedQuery, filterSection]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -82,11 +101,11 @@ export default function FAQPage() {
 
       <section className="py-16 md:py-20 bg-muted/30 flex-1">
         <div className="container space-y-10 max-w-5xl">
-          {filteredSections.length === 0 ? (
+          {filteredSections.length === 0 && debouncedQuery.trim() ? (
             <Card className="border-primary/20">
               <CardContent className="p-6 md:p-8 text-center">
                 <p className="text-lg text-muted-foreground">
-                  No FAQs found matching "{searchQuery}". Try a different search term.
+                  No FAQs found matching "{debouncedQuery}". Try a different search term.
                 </p>
               </CardContent>
             </Card>
