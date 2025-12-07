@@ -63,40 +63,7 @@ export default function Page() {
         },
       });
 
-      // Badge animation
-      const badge = document.getElementById('scrollBadge');
-      const trigger = document.getElementById('triggerElement');
-
-      if (badge && trigger) {
-        gsap.from(badge, {
-          scrollTrigger: {
-            trigger: trigger,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-          },
-          opacity: 0,
-          scale: 0.5,
-          y: 50,
-          duration: 0.5,
-          ease: "power2.out"
-        });
-
-        // Make it disappear when scrolling past
-        gsap.to(badge, {
-          scrollTrigger: {
-            trigger: trigger,
-            start: "bottom 20%",
-            end: "bottom 0%",
-            scrub: true,
-          },
-          opacity: 0,
-          scale: 0.5,
-          y: 50,
-          duration: 0.5,
-          ease: "power2.in"
-        });
-      }
+    
     }, ref);
 
     return () => ctx.revert();
@@ -338,7 +305,7 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
           </div>
         </div>
       </section>
-
+      <ScrollBadge />
       {/* CTA Section */}
       <CTA />
 

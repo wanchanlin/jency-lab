@@ -1,29 +1,72 @@
-"use client";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger with GSAP (important for global access)
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollBadge() {
-    return (
-        <section>
-            <div className="relative h-screen bg-gray-100 p-8">
-                {/* <!-- Your Scroll Trigger Target --> */}
-                <div id="triggerElement" className="h-screen flex items-center justify-center">
-                    <h1 className="text-5xl font-bold text-gray-800">Scroll Down to See the Badge!</h1>
-                </div>
+  // 1. Create a ref to attach to the animated text element
+  const animatedTextRef = useRef<HTMLHeadingElement>(null);
 
-                {/* <!-- The Badge --> */}
-                <div id="scrollBadge" className="fixed bottom-8 right-8 z-50">
-                    <span
-                        className="inline-flex items-center rounded-full bg-indigo-600 px-3 py-2 text-sm font-medium text-white shadow-xl transition-all hover:bg-indigo-700 cursor-pointer">
-                        <svg className="-ml-1 mr-1.5 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                            fill="currentColor" aria-hidden="true">
-                            <path fillRule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2.59L7.364 9.364a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z"
-                                clipRule="evenodd" />
-                        </svg>
-                        New Feature!
-                    </span>
-                </div>
-            </div>
-        </section>
-    );
+  useEffect(() => {
+    // Ensure the ref is attached to the element
+    const animatedText = animatedTextRef.current;
+
+    if (!animatedText) return;
+
+    // --- GSAP Setup Logic ---
+
+    // 2. Safely get the original text content
+    const originalText = animatedText.textContent?.trim() || "";
+
+    // 3. Duplicate the text and apply styling
+    // We only duplicate it once to handle the horizontal loop.
+    animatedText.innerHTML = `${originalText} ${originalText}`;
+    
+    // Set overflow hidden on the container (CSS needed) to clip the doubled text.
+
+    // 4. Apply GSAP ScrollTrigger animation
+    const scrollTrigger = gsap.to(animatedText, {
+      // The x property will move the duplicated text container to the left by 50%
+      // of its total width, causing the second copy to slide into view
+      // just as the first copy moves out.
+      x: "-50%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: animatedText.parentElement, // Use the parent as the trigger
+        start: "top bottom", // Start when the text enters the bottom of the viewport
+        end: "bottom top", // End when the text leaves the top of the viewport
+        scrub: true, // Link the animation progress directly to the scroll
+      },
+    });
+
+    // Optional: Cleanup function to revert ScrollTrigger instances on unmount
+    return () => {
+        scrollTrigger.scrollTrigger?.kill();
+    };
+
+  }, []); // Empty dependency array ensures this runs once on mount
+
+  // The className 'animated-text-container' is needed for CSS overflow: hidden
+  return (
+    <section className="container-fluid vh-100 d-flex align-items-center justify-content-center position-relative effect-section" data-effect="carousel-scroll">
+      {/* Utility button/elements */}
+     
+      
+      <div className="row w-100 animated-text-container" style={{ overflow: 'hidden' }}>
+        <div className="col-12 text-center">
+          {/* 5. Attach the ref to the element we want to animate */}
+          {/* text-nowrap is essential to keep the duplicated text on one line */}
+          <h1 
+            ref={animatedTextRef} 
+            className=" rotate-25 text-white mt-5 py-5 text-5xl font-bold animated-text text-nowrap display-1 fw-bold bg-black" 
+            style={{ display: 'inline-block' }} 
+          >
+            We will talk to you soon! We will love to hear from you! We will be happy to help you! collaborate with us!
+          </h1>
+        </div>
+      </div>
+    </section>
+  );
 }
-
