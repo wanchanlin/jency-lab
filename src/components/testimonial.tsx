@@ -29,7 +29,7 @@ export default function Testimonial({
         “{quote}”
       </blockquote>
 
-      <figcaption className="mt-4 flex items-center gap-3">
+      <figcaption className="mt-4 flex items-center gap-3 ">
         <Avatar>
           {image ? (
             <AvatarImage src={image} alt={name} />
