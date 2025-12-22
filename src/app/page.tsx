@@ -19,6 +19,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ScrollBadge from "@/components/scrollbadge";
+import Testimonial from "@/components/testimonial";
 
 type Product = {
   id: number;
@@ -305,6 +306,35 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
           </div>
         </div>
       </section>
+      {/* Testimonials Section */}
+      
+      <section className=" container mx-auto py-16 px md:py-24 flex flex-col md:flex-row gap-8 py-1 bg-muted/30">
+       <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-sans font-bold">
+              Testimonials
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              What Our Customers Say
+            </p>
+          </div>
+      <Testimonial
+        quote="I've tried many skincare products, but these soaps are the best! Great soaps, I love it! Perfect Christmas present!"
+        name="Austin M"
+        title=" Customer"
+        />
+        <Testimonial
+        quote="The scents are amazing and my skin feels so soft."
+        name="Dasha K"
+        title="Oily Skin Customer"
+        />
+        <Testimonial
+        quote="I appreciate the natural ingredients and the care that goes into each bar."
+        name="Sophie L"
+        title="Sensitive Skin Customer"
+        />
+
+        </section>
+
       <ScrollBadge />
       {/* CTA Section */}
       <CTA />
