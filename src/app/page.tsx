@@ -320,7 +320,7 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
       <Testimonial
         quote="I've tried many skincare products, but these soaps are the best! Great soaps, I love it! Perfect Christmas present!"
         name="Austin M"
-        title=" Customer"
+        title="Customer"
         />
         <Testimonial
         quote="The scents are amazing and my skin feels so soft."
