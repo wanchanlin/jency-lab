@@ -334,8 +334,18 @@ const featuredProducts = products.slice(0, 4).map((product: Product) => ({
         />
 
         </section>
+        <section className="relative py-40 overflow-hidden flex items-center justify-center min-h-[500px] bg-background">
+  
+  {/* The First Bar (Slanting Down) */}
+  <div className="absolute w-[120%] rotate-[5deg] z-10">
+    <ScrollBadge className="shadow-2xl bg-primary" />
+  </div>
 
-      <ScrollBadge />
+  {/* The Second Bar (Slanting Up) */}
+  <div className="absolute w-[120%] -rotate-[5deg] z-20">
+    <ScrollBadge className="shadow-2xl bg-black" />
+  </div>
+  </section>
       {/* CTA Section */}
       <CTA />
 
