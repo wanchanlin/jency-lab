@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
   return (
       
   
-  <section className=" container relative bg-primary/10  flex items-center justify-center overflow-hidden mb-8 rounded-lg ">
+  <section className="  mt-8  container relative bg-primary/10  flex items-center justify-center overflow-hidden mb-8 rounded-lg ">
        
         <div className=" container mx-auto px-8 py-16 grid gap-8  ">
           
@@ -13,7 +13,7 @@ import { ArrowRight } from "lucide-react";
 
 
           
-          <div className=" space-y-6 text-center  ">
+          <div className="space-y-6 text-center  ">
             <h2 className="text-3xl md:text-4xl font-sans font-bold">
               Experience Natural Skincare
             </h2>
